@@ -1,0 +1,10 @@
+body {
+    line-height: 1.5;
+    font-size: 100%;
+    color: darkgray;
+}
+
+a, a:link, a:active {
+    text-decoration: none;
+    color: #555;
+}
