@@ -6,6 +6,7 @@
     <title>Mark Greenwood's Portfolio</title>
     <!-- CSS directory structure recommended by Aaron Krause -->
     <link rel="stylesheet" href="vendor/styles/normalize.css">
+    <link rel="stylesheet" href="styles/icons.css">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="styles/module.css">
@@ -14,17 +15,19 @@
     <header>
         <h1>Mark Greenwood's Portfolio</h1>
         <h2>Full-Stack JavaScript Developer</h2>
-        <nav>
+        <nav class="main-nav">
+            <div class="icon-menu"></div>
             <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">About</a></li>
-                <li><a href="">LinkedIn</a></li>
-                <li><a href="">Twitter</a></li>
-                <li><a href="">GitHub</a></li>
+                <li class="tab"><a class="icon-home" href="index.html"> Home</a></li>
+                <li class="tab"><a class="icon-about" href="#">About</a></li>
+                <li><a class="icon-linkedin" href="https://www.linkedin.com/in/markjgreenwood" target="_blank"> LinkedIn</a></li>
+                <li><a class="icon-twitter3" href="https://twitter.com/MarkGreenwood4" target="_blank"> Twitter</a></li>
+                <li><a class="icon-github" href="https://github.com/markgreenwood" target="_blank"> GitHub</a></li>
             </ul>
         </nav>
     </header>
     <main>
+        <p>Stuff goes here!</p>
     </main>
     <footer>
         &copy; 2016 Mark Greenwood
