@@ -1,7 +1,23 @@
 body {
-    line-height: 1.5;
+    line-height: 1.1;
     font-size: 100%;
-    color: darkgray;
+}
+
+header {
+  padding: 1em;
+  margin: 1em;
+  background-color: lightgray;
+}
+
+article {
+  border-bottom: 1px solid black;
+  margin: 0;
+}
+
+footer {
+  padding: 1em;
+  margin: 1em;
+  background-color: yellow;
 }
 
 a, a:link, a:active {
