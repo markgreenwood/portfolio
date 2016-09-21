@@ -2,7 +2,7 @@ var ourLocalData = [
   {
     title:        'Death Star Plans',
     category:     'Hardware',
-    publishedOn:  '2016-01-01',
+    publishedOn:  '1977-09-01',
     body:         '<p>Don\'t act so surprised, Your Highness. You weren\'t on any mercy mission this time. Several transmissions were beamed to this ship by Rebel spies. I want to know what happened to the plans they sent you.</p>',
   },
   {
