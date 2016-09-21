@@ -1,9 +1,5 @@
-.main-nav ul {
-    display: none;
-    padding: 0;
-    clear: both;
-}
-
-.main-nav:hover ul {
-    display: block;
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
 }
