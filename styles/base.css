@@ -24,6 +24,7 @@ main {
 
 #about {
   border-bottom: 1px solid black;
+  visibility: hidden;
 }
 
 article {
