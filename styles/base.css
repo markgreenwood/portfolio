@@ -13,9 +13,11 @@ main {
   margin: 1em;
   background-color: cyan;
 }
+
 article {
   border-bottom: 1px solid black;
   margin: 0;
+  background-color: tan;
 }
 
 footer {
