@@ -3,3 +3,14 @@
   display: table;
   clear: both;
 }
+
+header {
+  text-align: center;
+}
+
+header h1, h2 {
+  text-align: center;
+}
+
+.profile-photo {
+}
