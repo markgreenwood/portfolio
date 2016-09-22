@@ -1,11 +1,24 @@
 body {
   font-size: 100%;
+  background-color: #006561;
+}
+
+h1 {
+  margin: 0.2em 0;
+}
+
+h2 {
+  margin: 0.2em 0;
+}
+
+#about {
+  background-color: beige;
 }
 
 header {
   padding: 1em;
   margin: 1em;
-  background-color: #a2bfdb;
+  background-color: #33cdc7;
 }
 
 header h1 {
@@ -17,24 +30,26 @@ header h2 {
 }
 
 main {
-  padding: 1em;
+  padding: 0.2em;
   margin: 1em;
-  background-color: #d1cbc7;
+  background-color: #33cdc7;
 }
 
-#aboutme {
+article, #about {
   border-bottom: 1px solid black;
+  margin: 0.2em;
+  padding: 0.2em;
+  background-color: beige;
 }
 
-article {
-  border-bottom: 1px solid black;
-  margin: 0;
+.article-body {
+  padding: 0
 }
 
 footer {
   padding: 1em;
   margin: 1em;
-  background-color: #a2bfdb;
+  background-color: #33cdc7;
 }
 
 a, a:link, a:active {

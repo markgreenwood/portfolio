@@ -22,6 +22,11 @@
   font-size: 1.5em;
   padding: 0.5em 0.2em;
   border-bottom: 1px solid #ccc;
+  background-color: #ffb173;
+}
+
+.main-nav li:hover {
+  background-color: #ff7100;
 }
 
 .template {
