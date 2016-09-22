@@ -1,4 +1,4 @@
-var ourLocalData = [
+var ourLocalPostData = [
   {
     title:        'Death Star Plans',
     category:     'Hardware',
@@ -16,5 +16,11 @@ var ourLocalData = [
     category:     'Hardware',
     publishedOn:  '2016-09-21',
     body:         '<p>I\'m on fire!</p>',
+  },
+  {
+    title:        'Test System Process Control App',
+    category:     'Software',
+    publishedOn:  '2016-09-22',
+    body:         '<img src="images/TestSystemAudit.png"><p>This application provides a visual tool for engineers to quickly assess test system performance. By collecting production data from a sample of modules, then collecting reference data on the same group of modules, the engineer can assess how accurately the production test system is measuring performance metrics. The Test System Audit tool provides graphical representations that enable a fast "go/no-go" decision.</p>'
   },
 ];
