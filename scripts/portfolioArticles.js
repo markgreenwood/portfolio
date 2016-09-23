@@ -1,4 +1,4 @@
-var ourLocalData = [
+var ourLocalPostData = [
   {
     title:        'Death Star Plans',
     category:     'Hardware',
@@ -12,9 +12,15 @@ var ourLocalData = [
     body:         '<p>When life gives you lemons, don\’t make lemonade. Make life take the lemons back! Get mad! I don\’t want your damn lemons, what the hell am I supposed to do with these? Demand to see life\’s manager! Make life rue the day it thought it could give Cave Johnson lemons! Do you know who I am? I\’m the man who’s gonna burn your house down! With the lemons! I\’m gonna get my engineers to invent a combustible lemon that burns your house down!</p>',
   },
   {
-    title:        'Turret',
+    title:        'Sentry Turret',
     category:     'Hardware',
     publishedOn:  '2016-09-21',
-    body:         '<p>I\'m on fire!</p>',
+    body:         '<p>Are you still there? Aaaaahhh... I\'m on fire!</p>',
+  },
+  {
+    title:        'Test System Process Control App',
+    category:     'Software',
+    publishedOn:  '2016-09-22',
+    body:         '<img src="images/TestSystemAudit.png"><p>This application provides a visual tool for engineers to quickly assess test system performance. By collecting production data from a sample of modules, then collecting reference data on the same group of modules, the engineer can assess how reliable the production test system\'s measurements are. The Test System Audit tool provides graphical representations that enable a fast "go/no-go" decision.</p>'
   },
 ];

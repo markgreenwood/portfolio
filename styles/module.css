@@ -19,14 +19,19 @@
 }
 
 .main-nav li {
-  font-size: 1.5em;
   padding: 0.5em 0.2em;
   border-bottom: 1px solid #ccc;
   background-color: #ffb173;
+  border-radius: 0.3em;
 }
 
 .main-nav li:hover {
   background-color: #ff7100;
+}
+
+.main-nav a {
+  font-variant: small-caps;
+  font-size: 1.2em;
 }
 
 .template {
@@ -37,7 +42,7 @@
   font-style: italic;
 }
 
-@media only screen and (min-width: 640px){
+@media only screen and (min-width: 640px) {
   .icon-menu {
     display: none;
   }

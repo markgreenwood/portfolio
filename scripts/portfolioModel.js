@@ -8,31 +8,25 @@ function Article(opts) {
 }
 
 Article.prototype.toHtml = function () {
-  var $newArticle = $('article.template').clone();
-  $newArticle.attr('data-category', this.category);
-
-  /* TODO: Need to fill in rest of template clone with properties from this
-  Article instance.
-  Need:
-    1. title
-    2. publication date
-    3. body
+  // DONE: Render to HTML using Handlebars template
+  /*
+    1. Get the article Handlbars template using jQuery
+    2. Compile the template using Handlebars
+    3. Generate the HTML by calling te template function on this article's data-category
   */
-  $newArticle.find('.article-title').text(this.title);
-  $newArticle.find('time[pubdate]').attr('title', this.publishedOn);
-  $newArticle.find('time').html('about ' + parseInt((new Date() - new Date(this.publishedOn))/60/60/24/1000) + ' days ago');
-  $newArticle.find('.article-body').html(this.body);
-
-  $newArticle.removeClass('template');
-
-  return $newArticle;
+  var source = $('#project-template').html();
+  var template = Handlebars.compile(source);
+  this.daysAgo = parseInt((new Date() - new Date(this.publishedOn))/60/60/24/1000);
+  this.publishStatus = this.publishedOn ? 'posted ' + this.daysAgo + ' days ago' : '(unpublished)';
+  var html = template(this);
+  return html;
 };
 
-ourLocalData.sort(function(curElem, nextElem) {
+ourLocalPostData.sort(function(curElem, nextElem) {
   return (new Date(nextElem.publishedOn)) - (new Date(curElem.publishedOn));
 });
 
-ourLocalData.forEach(function(ele) {
+ourLocalPostData.forEach(function(ele) {
   articles.push(new Article(ele));
 });
 

@@ -5,10 +5,12 @@ body {
 
 h1 {
   margin: 0.2em 0;
+  font-family: 'David Libre', serif;
 }
 
 h2 {
   margin: 0.2em 0;
+  font-family: 'David Libre', serif;
 }
 
 #about {
@@ -19,10 +21,11 @@ header {
   padding: 1em;
   margin: 1em;
   background-color: #33cdc7;
+  border-radius: 0.5em;
 }
 
 header h1 {
-  font-variant: small-caps;
+  font-style: bold;
 }
 
 header h2 {
@@ -33,6 +36,7 @@ main {
   padding: 0.2em;
   margin: 1em;
   background-color: #33cdc7;
+  border-radius: 0.5em;
 }
 
 article, #about {
@@ -40,16 +44,23 @@ article, #about {
   margin: 0.2em;
   padding: 0.2em;
   background-color: beige;
+  border-radius: .5em;
 }
 
 .article-body {
-  padding: 0
+  padding: 0.1em;
+  font-family: 'Lato', sans-serif;
+}
+
+.article-title {
+  font-family: 'David Libre', serif;
 }
 
 footer {
   padding: 1em;
   margin: 1em;
   background-color: #33cdc7;
+  border-radius: 0.5em;
 }
 
 a, a:link, a:active {
