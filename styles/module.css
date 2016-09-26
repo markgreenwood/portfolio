@@ -1,3 +1,13 @@
+#profile-photo {
+  width: 200px;
+  height: 200px;
+  border-radius: 4em;
+}
+
+#about {
+  background-color: beige;
+}
+
 .icon-menu {
   float: right;
   font-size: 2em;
@@ -31,7 +41,7 @@
 
 .main-nav a {
   font-variant: small-caps;
-  font-size: 1.2em;
+  font-size: 1.1em;
 }
 
 .template {
