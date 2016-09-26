@@ -68,3 +68,7 @@ a, a:link, a:active {
   color: #555;
   padding: 1em;
 }
+
+figcaption {
+  font-style: italic;
+}
