@@ -9,7 +9,7 @@ var ourLocalPostData = [
     title:        'Combustible Lemons',
     category:     'Hardware',
     publishedOn:  '2016-09-20',
-    body:         '<figure><img src="images/FreeGreatPicture.com-29691-lemon.jpg" /><figcaption>Image courtesy www.freegreatpicture.com</figcaption></figure><p>When life gives you lemons, don\’t make lemonade. Make life take the lemons back! Get mad! I don\’t want your damn lemons, what the hell am I supposed to do with these? Demand to see life\’s manager! Make life rue the day it thought it could give Cave Johnson lemons! Do you know who I am? I\’m the man who’s gonna burn your house down! With the lemons! I\’m gonna get my engineers to invent a combustible lemon that burns your house down!</p>',
+    body:         '<figure><img src="images/FreeGreatPicture.com-29691-lemon.jpg" /><figcaption>Image:<a href=\"http://www.freegreatpicture.com\">www.freegreatpicture.com</a></figcaption></figure><p>When life gives you lemons, don\’t make lemonade. Make life take the lemons back! Get mad! I don\’t want your damn lemons, what the hell am I supposed to do with these? Demand to see life\’s manager! Make life rue the day it thought it could give Cave Johnson lemons! Do you know who I am? I\’m the man who’s gonna burn your house down! With the lemons! I\’m gonna get my engineers to invent a combustible lemon that burns your house down!</p>',
   },
   {
     title:        'Sentry Turret',
