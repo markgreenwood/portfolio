@@ -32,17 +32,24 @@ Article.loadAll = function(articlesData) {
 
 Article.fetchAll = function() {
   if (localStorage.articlesData) {
-    // TODO: load articles data from localStorage
+    // TODO: check JSON header's ETag against localStorage.ETag
+    // if ( etags match ) {
+      // TODO: If tags match, read articlesData from localStorage
+    // } else {
+      // TODO: else, request the JSON data instead
+    // }
+    // DONE: load articles data from localStorage
     Article.loadAll(JSON.parse(localStorage.articlesData));
     portfolioView.renderIndexPage();
   } else {
-    // TODO: get articles data from "server" (JSON file)
-    $.getJSON('data/articles.json', function(data, status, xhr) {
+    // DONE: get articles data from "server" (JSON file)
+    $.getJSON('data/articles.json').done(function(data, status, xhr) {
       localStorage.setItem('articlesData', xhr.responseText);
+      localStorage.setItem('etag', xhr.getResponseHeader('ETag'));
       Article.loadAll(JSON.parse(localStorage.articlesData));
       portfolioView.renderIndexPage();
     }).fail(function() {
-      console.alert('Failed to get JSON file');
+      console.error('Failed to get JSON file');
     });
   }
 };
