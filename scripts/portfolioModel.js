@@ -30,26 +30,36 @@ Article.loadAll = function(articlesData) {
   });
 };
 
-Article.fetchAll = function() {
+Article.fetchAll = function(nextFunction) {
   if (localStorage.articlesData) {
-    // TODO: check JSON header's ETag against localStorage.ETag
-    // if ( etags match ) {
-      // TODO: If tags match, read articlesData from localStorage
-    // } else {
-      // TODO: else, request the JSON data instead
-    // }
-    // DONE: load articles data from localStorage
-    Article.loadAll(JSON.parse(localStorage.articlesData));
-    portfolioView.renderIndexPage();
+    // DONE: check JSON header's ETag against localStorage.ETag
+    $.ajax({
+      type: 'HEAD',
+      url:  '/data/articles.json',
+    })
+    .done(function(data, status, xhr) {
+      var eTag = xhr.getResponseHeader('eTag');
+      if (!localStorage.eTag || eTag !== localStorage.eTag) {
+        localStorage.setItem('eTag', eTag);
+        // DONE: get articles from "server" (JSON file)
+        Article.getAllFromFile(nextFunction);
+      } else {
+        //console.log('Loading articles from localStorage');
+        Article.loadAll(JSON.parse(localStorage.articlesData));
+        nextFunction();
+      }
+    });
   } else {
     // DONE: get articles data from "server" (JSON file)
-    $.getJSON('data/articles.json').done(function(data, status, xhr) {
-      localStorage.setItem('articlesData', xhr.responseText);
-      localStorage.setItem('etag', xhr.getResponseHeader('ETag'));
-      Article.loadAll(JSON.parse(localStorage.articlesData));
-      portfolioView.renderIndexPage();
-    }).fail(function() {
-      console.error('Failed to get JSON file');
-    });
+    Article.getAllFromFile(nextFunction); // DONE: pass 'nextFunction' into getAll();
   }
+};
+
+Article.getAllFromFile = function(nextFunction) {
+  //console.log('Reading articles data from JSON file...');
+  $.getJSON('data/articles.json', function(respData) {
+    Article.loadAll(respData);
+    localStorage.articlesData = JSON.stringify(respData);
+    nextFunction();
+  });
 };
