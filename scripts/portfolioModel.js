@@ -1,11 +1,11 @@
-var articles = [];
-
 function Article(opts) {
   this.title = opts.title;
   this.category = opts.category;
   this.publishedOn = opts.publishedOn;
   this.body = opts.body;
 }
+
+Article.all = []; // initialize class variable 'all' to an empty list
 
 Article.prototype.toHtml = function () {
   // DONE: Render to HTML using Handlebars template
@@ -22,14 +22,27 @@ Article.prototype.toHtml = function () {
   return html;
 };
 
-ourLocalPostData.sort(function(curElem, nextElem) {
-  return (new Date(nextElem.publishedOn)) - (new Date(curElem.publishedOn));
-});
+Article.loadAll = function(articlesData) {
+  articlesData.sort(function(curArticle, nextArticle) {
+    return (new Date(nextArticle.publishedOn)) - (new Date(curArticle.publishedOn));
+  }).forEach(function(article) {
+    Article.all.push(new Article(article));
+  });
+};
 
-ourLocalPostData.forEach(function(ele) {
-  articles.push(new Article(ele));
-});
-
-articles.forEach(function(a) {
-  $('#articles').append(a.toHtml());
-});
+Article.fetchAll = function() {
+  if (localStorage.articlesData) {
+    // TODO: load articles data from localStorage
+    Article.loadAll(JSON.parse(localStorage.articlesData));
+    portfolioView.renderIndexPage();
+  } else {
+    // TODO: get articles data from "server" (JSON file)
+    $.getJSON('data/articles.json', function(data, status, xhr) {
+      localStorage.setItem('articlesData', xhr.responseText);
+      Article.loadAll(JSON.parse(localStorage.articlesData));
+      portfolioView.renderIndexPage();
+    }).fail(function() {
+      console.alert('Failed to get JSON file');
+    });
+  }
+};

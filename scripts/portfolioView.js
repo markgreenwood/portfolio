@@ -13,4 +13,11 @@ portfolioView.handleMainNav = function() {
   $('.main-nav .tab:first').click();
 };
 
-portfolioView.handleMainNav();
+portfolioView.renderIndexPage = function() {
+  Article.all.forEach(function(article) {
+    $('#articles').append(article.toHtml());
+  });
+  portfolioView.handleMainNav();
+};
+
+Article.fetchAll();

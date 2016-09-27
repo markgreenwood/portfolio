@@ -24,3 +24,5 @@ var ourLocalPostData = [
     body:         '<img src="images/TestSystemAudit.png" /><p>This application provides a visual tool for engineers to quickly assess test system performance. By collecting production data from a sample of modules, then collecting reference data on the same group of modules, the engineer can assess how reliable the production test system\'s measurements are. The Test System Audit tool provides graphical representations that enable a fast "go/no-go" decision.</p>'
   },
 ];
+
+//localStorage.setItem('articlesData', JSON.stringify(ourLocalPostData));
