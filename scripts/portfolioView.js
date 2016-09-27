@@ -5,7 +5,7 @@ portfolioView.handleMainNav = function() {
   */
   $('.main-nav').on('click', '.tab', function() {
     var selection = $(this).attr('data-content');
-    console.log(selection);
+    //console.log(selection);
     $('.tab-content').hide();
     $('#' + selection).fadeIn('slow');
   });
@@ -20,4 +20,4 @@ portfolioView.renderIndexPage = function() {
   portfolioView.handleMainNav();
 };
 
-Article.fetchAll();
+Article.fetchAll(portfolioView.renderIndexPage);
