@@ -63,3 +63,27 @@ Article.getAllFromFile = function(nextFunction) {
     nextFunction();
   });
 };
+
+Article.numArticles = function() {
+  return Article.all.length;
+};
+
+Article.avgWordCount = function() {
+  var wcData = Article.all.map(function(article) {
+    return article.body.match(/\w+/g).length;
+  })
+  .reduce(function(acc, curr, index) {
+    return { sum: acc.sum + curr, count: index };
+  }, { sum: 0, count: 0 });
+  return wcData.sum/wcData.count;
+};
+
+Article.avgPostAge = function() {
+  Article.all.map(function(article) {
+    return article.daysAgo;
+  });
+  var ageData = Article.all.reduce(function(acc, curr, index) {
+    return { sum: acc.sum + curr.daysAgo, count: index };
+  }, { sum: 0, count: 0 });
+  return (ageData.sum/ageData.count).toFixed(1);
+};
