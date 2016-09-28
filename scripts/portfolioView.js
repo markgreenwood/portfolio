@@ -18,6 +18,10 @@ portfolioView.renderIndexPage = function() {
     $('#articles').append(article.toHtml());
   });
   portfolioView.handleMainNav();
+  $('#num-articles').text(Article.numArticles());
+  $('#avg-word-count').text(Article.avgWordCount());
+  // TODO: report avg post age
+  $('#avg-post-age').text(Article.avgPostAge());
 };
 
 Article.fetchAll(portfolioView.renderIndexPage);
