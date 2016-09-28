@@ -79,6 +79,11 @@ Article.avgWordCount = function() {
 };
 
 Article.avgPostAge = function() {
-  // TODO: find average posting age
-  return 0;
+  Article.all.map(function(article) {
+    return article.daysAgo;
+  });
+  var ageData = Article.all.reduce(function(acc, curr, index) {
+    return { sum: acc.sum + curr.daysAgo, count: index };
+  }, { sum: 0, count: 0 });
+  return (ageData.sum/ageData.count).toFixed(1);
 };
