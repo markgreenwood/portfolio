@@ -1,9 +1,11 @@
 (function(module) {
+
+  // Article constructor function
   function Article(opts) {
-    this.title = opts.title;
-    this.category = opts.category;
-    this.publishedOn = opts.publishedOn;
-    this.body = opts.body;
+    //DONE: use iteration to assign properties to this object.
+    Object.keys(opts).forEach(function(key, index, keys) {
+      this[key] = opts[key];
+    }, this); // last artgument tells the callback what to use as the value for *this*
   }
 
   Article.all = []; // initialize class variable 'all' to an empty list
