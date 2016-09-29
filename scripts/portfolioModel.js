@@ -15,7 +15,7 @@
     2. Compile the template using Handlebars
     3. Generate the HTML by calling te template function on this article's data-category
     */
-    var source = $('#project-template').html();
+    var source = $('#article-template').html();
     var template = Handlebars.compile(source);
     this.daysAgo = parseInt((new Date() - new Date(this.publishedOn))/60/60/24/1000);
     this.publishStatus = this.publishedOn ? 'posted ' + this.daysAgo + ' days ago' : '(unpublished)';
