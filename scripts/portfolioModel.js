@@ -3,7 +3,7 @@
   // Article constructor function
   function Article(opts) {
     //DONE: use iteration to assign properties to this object.
-    Object.keys(opts).forEach(function(key, index, keys) {
+    Object.keys(opts).forEach(function(key) {
       this[key] = opts[key];
     }, this); // last artgument tells the callback what to use as the value for *this*
   }

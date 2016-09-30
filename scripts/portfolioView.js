@@ -26,4 +26,4 @@
   };
 
   Article.fetchAll(portfolioView.renderIndexPage);
-})();
+})(window);
