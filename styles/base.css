@@ -46,8 +46,8 @@ article img {
 }
 
 article, #about {
-  border-bottom: 1px solid black;
   margin: 0.2em;
+  margin-top: 0.4em;
   padding: 0.2em;
   background-color: beige;
   border-radius: .5em;
@@ -63,7 +63,7 @@ article, #about {
 }
 
 footer {
-  padding: 1em;
+  padding: 0.2em 1em;
   margin: 1em;
   background-color: #33cdc7;
   border-radius: 0.5em;
