@@ -27,6 +27,9 @@ application (lab) in Code Fellows 301
       <div class="article-body">{{{body}}}</div>
     </article>
   </script>
+  <script id="repo-template" type="text/x-handlebars-template">
+    <li><a href="{{html_url}}" target="_blank">{{name}}</a></li>
+  </script>
 </head>
 <body>
   <header class="clearfix">
@@ -50,6 +53,10 @@ application (lab) in Code Fellows 301
     <section id="about" class="tab-content">
       <h1>About me</h1>
       <p>Intuitively Agile engineering leader with demonstrated success improving product development processes, and working as a “bridge-builder” between people representing different functions or interests; my goal is to help product development teams to achieve their full potential, deliver great products, and have fun along the way.</p>
+      <h1>Links to selected GitHub repos</h1>
+      <ul id="github-repos">
+        <li>(repos go here)</li>
+      </ul>
     </section>
   </main>
   <footer>
@@ -61,8 +68,16 @@ application (lab) in Code Fellows 301
   <script type="text/javascript" src="/vendor/scripts/page.js"></script>
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+
+  <!-- Token -->
+  <script src="./githubToken.js"></script>
+  <!-- Models -->
   <script type="text/javascript" src="scripts/models/portfolioModel.js"></script>
+  <script type="text/javascript" src="scripts/models/repoModel.js"></script>
+  <!-- Views -->
   <script type="text/javascript" src="scripts/views/portfolioView.js"></script>
+  <script type="text/javascript" src="scripts/views/repoView.js"></script>
+  <!-- Controllers -->
   <script type="text/javascript" src="scripts/controllers/aboutController.js"></script>
   <script type="text/javascript" src="scripts/controllers/portfolioController.js"></script>
   <script type="text/javascript" src="scripts/controllers/routes.js"></script>
