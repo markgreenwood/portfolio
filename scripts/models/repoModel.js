@@ -4,9 +4,9 @@
   reposObj.allRepos = [];
 
   reposObj.requestRepos = function(callback) {
-    $.ajax(
-      '/github/users/markgreenwood/repos'
-    ).done(function(data) {
+    $.ajax({
+      url: '/github/users/markgreenwood/repos?per_page=100'
+    }).done(function(data) {
       // TODO: can this be just reposObj.allRepos = data?
       data.forEach(function(obj) {
         reposObj.allRepos.push(obj);
